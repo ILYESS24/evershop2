@@ -1,0 +1,16 @@
+node_modules
+dist
+.env
+.git
+.gitignore
+.DS_Store
+*.log
+coverage
+cypress
+.turbo
+docs
+*.md
+!README.md
+!README_RAILWAY.md
+!GUIDE_RAILWAY.md
+
