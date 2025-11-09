@@ -36,7 +36,7 @@ services:
           name: evershop-db
           property: database
       - key: DB_SSLMODE
-        value: require
+        value: no-verify
       - key: SUPPRESS_NO_CONFIG_WARNING
         value: "1"
 

@@ -19,7 +19,7 @@ DB_PORT=<votre-port-postgres>
 DB_USER=<votre-user-postgres>
 DB_PASSWORD=<votre-password-postgres>
 DB_NAME=<votre-database-name>
-DB_SSLMODE=require
+DB_SSLMODE=no-verify
 NODE_ENV=production
 PORT=<port-fourni-par-render>
 ```
@@ -40,7 +40,7 @@ DB_PORT=<copié depuis PostgreSQL Info>
 DB_USER=<copié depuis PostgreSQL Info>
 DB_PASSWORD=<copié depuis PostgreSQL Info>
 DB_NAME=<copié depuis PostgreSQL Info>
-DB_SSLMODE=require
+DB_SSLMODE=no-verify
 ```
 
 ### Solution 3 : Vérifier que le Service PostgreSQL est Créé

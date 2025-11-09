@@ -12,7 +12,7 @@ DB_PORT=<fourni-par-render>
 DB_USER=<fourni-par-render>
 DB_PASSWORD=<fourni-par-render>
 DB_NAME=<fourni-par-render>
-DB_SSLMODE=require
+DB_SSLMODE=no-verify
 ```
 
 ## Variables Optionnelles (pour la première installation)

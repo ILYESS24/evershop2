@@ -74,7 +74,7 @@ DB_PORT=<votre-port-postgres>
 DB_USER=<votre-user-postgres>
 DB_PASSWORD=<votre-password-postgres>
 DB_NAME=<votre-database-name>
-DB_SSLMODE=require
+DB_SSLMODE=no-verify
 ```
 
 **Note**: Render fournit automatiquement le `PORT`, vous pouvez utiliser `PORT` directement.
@@ -186,7 +186,7 @@ Render ne fournit pas de stockage persistant pour les fichiers uploadés. Option
 - Vérifiez les logs de build
 
 ### Erreur de connexion à la base de données
-- Vérifiez que `DB_SSLMODE=require` est défini
+- Vérifiez que `DB_SSLMODE=no-verify` est défini
 - Vérifiez que toutes les variables DB_* sont correctes
 - Vérifiez que la base de données est dans la même région
 
