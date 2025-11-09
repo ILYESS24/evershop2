@@ -1,0 +1,20 @@
+[33mef1b1b22[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev[m[33m)[m Ajout configuration pour déploiement sur Render.com
+[33m5600ad1d[m[33m ([m[1;31morigin/dev[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #825 from evershopcommerce/theming
+[33m3f0bb0ec[m Feat: Convert event subscribers to typescript
+[33ma0496448[m Fix: Fix the default jwt configuration
+[33m4dfecdd0[m Merge pull request #820 from evershopcommerce/theming
+[33mfc224b57[m Fix: [SECURITY] /api/images is publically accessible by default & Image upload validation is insufficient. #819
+[33ma319fbed[m Chore: Upgrade query builder to 2.0.1
+[33mfdfabbd0[m Merge pull request #818 from evershopcommerce/theming
+[33m472dff38[m Fix: Fix error when create theme with no configuration file
+[33ma65ee3e0[m Fix: Do not include packages/evershop on end user environment
+[33mcc85f4cc[m Fix: Fix component content when creating a theme
+[33mda6448ad[m Fix : Fix path on window
+[33m3b28c7dd[m Merge pull request #817 from evershopcommerce/theming
+[33m2f8884f2[m Fix: Fix image path issue on window
+[33m0e91f68c[m Fix: Eslint
+[33mfa3425f8[m Fix: Remove method name from adding payment method api
+[33m91413c6a[m Merge pull request #816 from evershopcommerce/theming
+[33mc827b194[m Fix: Fix seed data
+[33m8f172399[m Fix: Fix cart item thumbnail size
+[33m3fdfa0a3[m Fix: Fix editor spacing

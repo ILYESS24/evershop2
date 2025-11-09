@@ -1,0 +1,46 @@
+services:
+  - type: web
+    name: evershop
+    env: node
+    plan: starter
+    region: oregon
+    buildCommand: npm install && npm run compile:db && npm run compile && npm run build
+    startCommand: npm run start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        fromService:
+          type: web
+          name: evershop
+          property: port
+      - key: DB_HOST
+        fromDatabase:
+          name: evershop-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: evershop-db
+          property: port
+      - key: DB_USER
+        fromDatabase:
+          name: evershop-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: evershop-db
+          property: password
+      - key: DB_NAME
+        fromDatabase:
+          name: evershop-db
+          property: database
+      - key: DB_SSLMODE
+        value: require
+
+databases:
+  - name: evershop-db
+    plan: starter
+    databaseName: evershop
+    user: evershop_user
+
