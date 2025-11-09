@@ -31,19 +31,6 @@
 
 EverShop is a modern, TypeScript-first eCommerce platform built with GraphQL and React. Designed for developers, it offers essential commerce features in a modular, fully customizable architecture—perfect for building tailored shopping experiences with confidence and speed.
 
-## 🚀 Déploiement Rapide sur Railway.app (Recommandé)
-
-La façon la plus simple de déployer EverShop :
-
-1. Allez sur [railway.app](https://railway.app)
-2. Connectez-vous avec GitHub
-3. Cliquez sur "New Project" → "Deploy from GitHub repo"
-4. Sélectionnez ce repository
-5. Ajoutez PostgreSQL : "+ New" → "Database" → "Add PostgreSQL"
-6. C'est tout ! Railway configure tout automatiquement
-
-📚 **Guide complet** : Voir [README_RAILWAY.md](./README_RAILWAY.md)
-
 ## Installation Using Docker
 
 You can get started with EverShop in minutes by using the Docker image. The Docker image is a great way to get started with EverShop without having to worry about installing dependencies or configuring your environment.
