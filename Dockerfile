@@ -19,6 +19,12 @@ RUN mkdir -p themes public media config
 COPY . .
 
 RUN npm install
+
+# Compile TypeScript/SWC code before building
+RUN npm run compile:db
+RUN npm run compile
+
+# Now run the build
 RUN npm run build
 
 EXPOSE 80
