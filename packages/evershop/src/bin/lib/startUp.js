@@ -52,6 +52,47 @@ export const start = async function start(context, cb) {
     process.exit(0);
   }
 
+  /** Auto-seed: Check if database is empty and seed if needed */
+  try {
+    const { pool } = await import('../../../lib/postgres/connection.js');
+    const { select } = await import('@evershop/postgres-query-builder');
+    const { info, success, warning } = await import('../../../lib/log/logger.js');
+    
+    // Check if products table exists and has data
+    try {
+      const products = await select()
+        .from('product')
+        .limit(1)
+        .execute(pool);
+      
+      if (products.length === 0) {
+        info('🔄 Database is empty. Running seed...');
+        const { exec } = await import('child_process');
+        const { promisify } = await import('util');
+        const execAsync = promisify(exec);
+        
+        try {
+          const { stdout, stderr } = await execAsync('npm run seed -- --all', {
+            env: process.env,
+            cwd: process.cwd()
+          });
+          if (stdout) console.log(stdout);
+          if (stderr) console.error(stderr);
+          success('✅ Seed completed successfully!');
+        } catch (seedError) {
+          warning(`⚠️  Seed failed: ${seedError.message}`);
+          warning('⚠️  Continuing startup without seed...');
+        }
+      }
+    } catch (checkError) {
+      // If table doesn't exist or other error, just continue
+      debug('Could not check database status, continuing...');
+    }
+  } catch (e) {
+    // Don't fail startup if auto-seed fails
+    debug('Auto-seed check failed, continuing startup...');
+  }
+
   /**
    * Get port from environment and store in Express.
    */
